@@ -17,7 +17,7 @@ for root, dirs, files in os.walk(args.input_dir):
             path.append(os.path.join(args.input_dir, name))
 print(path)
 
-base_model = "/home/sds/baokq/LLAMA/hugging_face_LLAMA_weights_7B"
+base_model = "YOUR_LLAMA_PATH"
 tokenizer = LlamaTokenizer.from_pretrained(base_model)
 model = LlamaForCausalLM.from_pretrained(
     base_model,
@@ -25,9 +25,7 @@ model = LlamaForCausalLM.from_pretrained(
     device_map="auto",
 )
 
-f = open('/home/sds/baokq/GenRec/data/movie/ratings.dat', 'r')
-data = f.readlines()
-f = open('/home/sds/baokq/GenRec/data/movie/movies.dat', 'r', encoding='ISO-8859-1')
+f = open('./movies.dat', 'r', encoding='ISO-8859-1')
 movies = f.readlines()
 movie_names = [_.split('::')[1].strip("\"") for _ in movies]
 movie_ids = [_ for _ in range(len(movie_names))]
@@ -57,7 +55,7 @@ def get_dist(test_data):
         predict_embeddings.append(hidden_states[-1][:, -1, :].detach().cpu())
     
     predict_embeddings = torch.cat(predict_embeddings, dim=0).cuda()
-    movie_embedding = torch.load("/home/sds/baokq/GenRec/data/movie/movie_embedding.pt").cuda()
+    movie_embedding = torch.load("./movie_embedding.pt").cuda()
     dist = torch.cdist(predict_embeddings, movie_embedding, p=2)
     dist_min = torch.min(dist, dim=1, keepdim=True)[0]
     dist_max = torch.max(dist, dim=1, keepdim=True)[0]

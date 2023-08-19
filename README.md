@@ -15,7 +15,7 @@ do
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
                 CUDA_VISIBLE_DEVICES=$1 python finetune_gen.py \
-                    --base_model /home/sds/baokq/LLAMA/hugging_face_LLAMA_weights_7B/ \
+                    --base_model YOUR_LLAMA_PATH/ \
                     --train_data_path "[\"./data/movie/train.json\"]"   \
                     --val_data_path "[\"./data/movie/valid_5000.json"]" \
                     --output_dir /model/movie/${seed}_${sample} \
@@ -50,7 +50,7 @@ do
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
                 CUDA_VISIBLE_DEVICES=$1 python finetune_gen.py \
-                    --base_model /home/sds/baokq/LLAMA/hugging_face_LLAMA_weights_7B/ \
+                    --base_model YOUR_LLAMA_PATH/ \
 --train_data_path "[\"./data/movie/train.json\", \"./data/game/train.json\"]"  \
                     --val_data_path "[\"./data/movie/valid_5000.json\", \"./data/game/valid_5000.json\"]"  \
                     --output_dir ./model/multi/${seed}_${sample} \
@@ -89,7 +89,7 @@ do
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
                 CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch finetune_gen.py \
-                    --base_model /home/sds/baokq/LLAMA/hugging_face_LLAMA_weights_7B/ \
+                    --base_model YOUR_LLAMA_PATH/ \
 --train_data_path "[\"./data/movie/train.json\", \"./data/game/train.json\"]"  \
                     --val_data_path "[\"./data/movie/valid_5000.json\", \"./data/game/valid_5000.json\"]"  \
                     --output_dir ./model/multi/${seed}_${sample} \

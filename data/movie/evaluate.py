@@ -16,7 +16,7 @@ for root, dirs, files in os.walk(args.input_dir):
             path.append(os.path.join(args.input_dir, name))
 print(path)
 
-base_model = "/home/sds/baokq/LLAMA/hugging_face_LLAMA_weights_7B"
+base_model = "YOUR_LLAMA_PATH"
 tokenizer = LlamaTokenizer.from_pretrained(base_model)
 model = LlamaForCausalLM.from_pretrained(
     base_model,
