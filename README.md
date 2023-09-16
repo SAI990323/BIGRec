@@ -1,5 +1,10 @@
 # Grounding4Rec
 
+### Environment
+```
+pip install -r requirements.txt
+```
+
 ### Preprocess
 Please follow the process.ipynb in each data directory.
 
@@ -111,4 +116,23 @@ do
         done
     done
 done
+```
+
+### Inference
+```
+#  Taking movie as an example
+python inference.py \
+    --base_model YOUR_LLAMA_PATH/ \
+    --lora_weights YOUR_LORA_PATH \
+    --test_data_path ./data/movie/test/test_5000.json \
+    --result_json_data ./movie_result/movie.json
+```
+
+### Evaluate
+```
+# Taking Game as an example
+# Directly
+python ./data/movie/evaluate.py --input_dir ./movie_result
+# CI Augmented
+python ./data/movie/adjust_ci.py --input_dir ./movie_result # Note that you need to have your own SASRec/DROS model (Specify the path in the code)
 ```
