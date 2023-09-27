@@ -1,5 +1,7 @@
 # Grounding4Rec
 
+　<font color=FF0000> We recently conducted tests on code performance on the platforms RTX3090, A40, and A100, and observed significant variations in code behavior across different environments. The reported results are based on running the code on a single A100. Currently, we are investigating the underlying factors contributing to these differences.  </font>
+
 ### Environment
 ```
 pip install -r requirements.txt
