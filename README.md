@@ -1,5 +1,6 @@
 # Grounding4Rec
 
+For item embedding, due to the quota of the git LFS, you can use the [link](https://rec.ustc.edu.cn/share/78de1e20-763a-11ee-b439-a3ef6ed8b1a3) with password 0g1g.
 ### Environment
 ```
 pip install -r requirements.txt
