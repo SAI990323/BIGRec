@@ -20,7 +20,7 @@ do
             for sample in 1024
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
-                CUDA_VISIBLE_DEVICES=$1 python finetune_gen.py \
+                CUDA_VISIBLE_DEVICES=$1 python train.py \
                     --base_model YOUR_LLAMA_PATH/ \
                     --train_data_path "[\"./data/movie/train.json\"]"   \
                     --val_data_path "[\"./data/movie/valid_5000.json"]" \
@@ -55,7 +55,7 @@ do
             for sample in 1024
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
-                CUDA_VISIBLE_DEVICES=$1 python finetune_gen.py \
+                CUDA_VISIBLE_DEVICES=$1 python train.py \
                     --base_model YOUR_LLAMA_PATH/ \
 --train_data_path "[\"./data/movie/train.json\", \"./data/game/train.json\"]"  \
                     --val_data_path "[\"./data/movie/valid_5000.json\", \"./data/game/valid_5000.json\"]"  \
@@ -94,7 +94,7 @@ do
             for sample in 1024
             do
                 echo "lr: $lr, dropout: $dropout , seed: $seed,"
-                CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch finetune_gen.py \
+                CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch train.py \
                     --base_model YOUR_LLAMA_PATH/ \
 --train_data_path "[\"./data/movie/train.json\", \"./data/game/train.json\"]"  \
                     --val_data_path "[\"./data/movie/valid_5000.json\", \"./data/game/valid_5000.json\"]"  \
