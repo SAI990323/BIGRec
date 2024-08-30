@@ -1,4 +1,6 @@
-# Grounding4Rec
+# BIGRec
+
+This is the implementatino of our work **[A Bi-Step Grounding Paradigm for Large Language Models in Recommendation Systems](https://arxiv.org/abs/2308.08434)**
 
 For item embedding, due to the quota of the git LFS, you can use the [link](https://rec.ustc.edu.cn/share/78de1e20-763a-11ee-b439-a3ef6ed8b1a3) with password 0g1g.
 ### Environment
@@ -137,3 +139,15 @@ python ./data/movie/evaluate.py --input_dir ./movie_result
 # CI Augmented
 python ./data/movie/adjust_ci.py --input_dir ./movie_result # Note that you need to have your own SASRec/DROS model (Specify the path in the code)
 ```
+
+
+If you're using this code in your research or applications, please cite our paper using this BibTeX:
+```bibtex
+@article{bao2023bi,
+  title={A bi-step grounding paradigm for large language models in recommendation systems},
+  author={Bao, Keqin and Zhang, Jizhi and Wang, Wenjie and Zhang, Yang and Yang, Zhengyi and Luo, Yancheng and Chen, Chong and Feng, Fuli and Tian, Qi},
+  journal={arXiv preprint arXiv:2308.08434},
+  year={2023}
+}
+```
+
