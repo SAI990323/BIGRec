@@ -12,7 +12,7 @@ Recently, we have trained Qwen2-0.5B on five Amazon datasets, the model paramete
 |Video_Games|[link](https://huggingface.co/USTCbaokq/BIGRec_Video_Games_0.5B)|
 |Toys_and_Games|[link](https://huggingface.co/USTCbaokq/BIGRec_Toys_and_Games_0.5B)|
 |Sports_and_Outdoors|[link](https://huggingface.co/USTCbaokq/BIGRec_Sports_and_Outdoors_0.5B)|
-|Book|[link](https://huggingface.co/USTCbaokq/BIGRec_Books_0.5B)|
+|Books|[link](https://huggingface.co/USTCbaokq/BIGRec_Books_0.5B)|
 
 For more details on data processing methods, recommendation performance and additional training information, please refer to this [repo](https://github.com/SAI990323/DecodingMatters).
 
