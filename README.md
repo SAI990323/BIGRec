@@ -6,7 +6,7 @@ For item embedding, due to the quota of the git LFS, you can use the [link](http
 ### Results and Models
 Recently, we have trained Qwen2-0.5B on five Amazon datasets, the model parameters are presented in the following table:
 
-|Dataset|NDCG@10|HR@10|Link|
+|Dataset|Link|
 |----------------|----------------|----------------|----------------|
 |CDs_and_Vinyl|[link](https://huggingface.co/USTCbaokq/BIGRec_CDs_and_Vinyl_0.5B)|
 |Video_Games|[link](https://huggingface.co/USTCbaokq/BIGRec_Video_Games_0.5B)|
