@@ -3,6 +3,19 @@
 This is the implementatino of our work **[A Bi-Step Grounding Paradigm for Large Language Models in Recommendation Systems](https://arxiv.org/abs/2308.08434)**
 
 For item embedding, due to the quota of the git LFS, you can use the [link](https://rec.ustc.edu.cn/share/78de1e20-763a-11ee-b439-a3ef6ed8b1a3) with password 0g1g.
+### Results and Models
+Recently, we have trained Qwen2-0.5B on five Amazon datasets, the results and the parameters  are presented in the following table:
+
+|Dataset|NDCG@10|HR@10|Link|
+|----------------|----------------|----------------|----------------|
+|CDs_and_Vinyl|0.077|0.109|[link](https://huggingface.co/USTCbaokq/BIGRec_CDs_and_Vinyl_0.5B)|
+|Video_Games|0.052|0.085|[link](https://huggingface.co/USTCbaokq/BIGRec_Video_Games_0.5B)|
+|Toys_and_Games|0.053|0.096|[link](https://huggingface.co/USTCbaokq/BIGRec_Toys_and_Games_0.5B)|
+|Sports_and_Outdoors|0.099|0.120|[link](https://huggingface.co/USTCbaokq/BIGRec_Sports_and_Outdoors_0.5B)|
+|Book|0.018|0.027|[link](https://huggingface.co/USTCbaokq/BIGRec_Books_0.5B)|
+
+For more details on data processing methods and additional training information, please refer to this [repo](https://github.com/SAI990323/DecodingMatters).
+
 ### Environment
 ```
 pip install -r requirements.txt
